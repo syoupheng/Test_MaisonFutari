@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>JapAdvisor</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -25,7 +25,7 @@
     <div id="page-container">
         <header>
             <a id="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                JapAdvisor
             </a>
             <nav>
                 <ul id="nav_list">
