@@ -6,7 +6,11 @@ This project is an application similar to the website "TripAdvisor" but it is fo
 
 ## 2) Creating the database
 
-In order to launch this project on your machine you will need to go to the **laravel** directory inside the project and import the database I created with MySQL by uisng the dump called **JapAdvisor.sql**. You can also create an empty database and use the migrations but in that case your tables will not be populated so I recommend importing the dump.
+In order to launch this project on your machine you will need to go to the **laravel** directory inside the project and import the database I created with MySQL by uisng the dump called **JapAdvisor.sql**. You can also create an empty database and use the migrations : 
+
+`php artisan migrate`
+
+However, in that case your tables will not be populated so I recommend importing the dump.
 
 ## 3) Installing the dependencies
 
@@ -38,8 +42,10 @@ You can access the application by typing this address in your browser :
 
 `localhost:<your_port_number>`
 
-Your port number is the last number that was displayed when you used the last command.
+Your port number (usually 8000) is the last number that was displayed when you used the last command.
 
 ## 7) How to use this application
 
-Congratulations ! You have now access to this application ! You can create a normal account but if you want to be able to delete establishements or comments you will need admin privileges. To get admin privileges you can login with **admin@gmail.com** and the password **admin**. Another method is to create a new admin user with the **UserSeeder.php** file. 
+Congratulations ! You have now access to this application ! You can create a normal account but if you want to be able to delete establishements or comments you will need admin privileges. To get admin privileges you can login with **admin@gmail.com** and the password **admin**. Another method is to create a new admin user with the **UserSeeder.php** file located at **/laravel/database/seeders/**. You can enter your email and password and other infos but make sure that the user you want to insert in the database has an admin role in the UserSeeder.php file then run this command :
+
+`php artisan db:seed --class=UserSeeder`

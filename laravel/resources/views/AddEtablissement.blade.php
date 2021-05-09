@@ -6,19 +6,19 @@
         {{ csrf_field() }}
         <h2 id="title-add-etabl">Ajoutez un établissement</h2>
         <label for="NomEtablissement">Nom de l'établissement</label>
-        <input type="text" name="NomEtablissement" required><br><br>
+        <input type="text" name="NomEtablissement" value="{{ old('NomEtablissement') }}" required><br><br>
         <label for="adresse">N° et nom de la voie</label>
-        <input type="text" name="adresse" required><br><br>
+        <input type="text" name="adresse" value="{{ old('adresse') }}" required><br><br>
         <label for="code_postal">Code postal</label>
-        <input type="text" name="code_postal" required><br><br>
+        <input type="text" name="code_postal" value="{{ old('code_postal') }}" required><br><br>
         <label for="ville">Ville</label>
-        <input type="text" name="ville" required><br><br>
+        <input type="text" name="ville" value="{{ old('ville') }}" required><br><br>
         <label for="pays">Pays</label>
-        <input type="text" name="pays" required><br><br>
+        <input type="text" name="pays" value="{{ old('pays') }}" required><br><br>
         <label for="description">Description</label>
-        <textarea name="description"></textarea><br><br><br>
+        <textarea name="description">{{ old('description') }}</textarea><br><br><br>
         <label for="picture">Choisissez une image : </label>
-        <input type="file" id="photo_upload" name="picture" accept="image/png, image/jpeg">
+        <input type="file" id="photo_upload" name="picture" accept="image/png, image/jpg">
         <div id="submit-div" class="flex-wrapper">
             <input type="submit" id="submit" value="Ajouter">
         </div>
